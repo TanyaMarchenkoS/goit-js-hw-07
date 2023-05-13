@@ -1,7 +1,4 @@
 import { galleryItems } from './gallery-items.js';
-// Change code below this line
-
-console.log(galleryItems);
 
 // отримала силку на ul
 const galleryList = document.querySelector('.gallery'); 
@@ -9,14 +6,13 @@ const galleryList = document.querySelector('.gallery');
 const galleryMarkup = createGalleryMarkup(galleryItems);
 // вставляємо розмітку в HTML
 galleryList.insertAdjacentHTML('beforeend', galleryMarkup);
-// робимо клік на галерею
+// добавляємо слухача клік на галерею
 galleryList.addEventListener('click', onGalleryListClick);
 
 // функція створення розмітки галереї <li><a><img>></a></li>
 function createGalleryMarkup(gallery) {
     return gallery.map(({ preview, original, description }) => {
-        return
-        `<li class="gallery__item">
+        return `<li class="gallery__item">
         <a class="gallery__link" href="${original}">
           <img
             class="gallery__image"
@@ -27,9 +23,9 @@ function createGalleryMarkup(gallery) {
         </a>
       </li>`;
     })
-        .join('');
+      .join('');
 }
-
+// функція клік на галереї
 function onGalleryListClick(evt) {
     evt.preventDefault();
 
@@ -53,7 +49,7 @@ function onGalleryListClick(evt) {
   );
 
   instance.show();
-
+// функція закриття модалки кнопкою Escape
   function closeByEsc({ code }) {
     if (code === 'Escape') {
       instance.close();
@@ -61,3 +57,6 @@ function onGalleryListClick(evt) {
   }
 }
  
+
+
+
