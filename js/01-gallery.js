@@ -1,5 +1,4 @@
 import { galleryItems } from './gallery-items.js';
-
 // отримала силку на ul
 const galleryList = document.querySelector('.gallery'); 
 // визиваємо функцію створення розмітки
